@@ -1,30 +1,30 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import Typed from 'typed.js';
-import { RiHeartPulseFill } from 'react-icons/ri';
-import { TfiWrite } from 'react-icons/tfi';
-import { FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
-import { HiMail } from 'react-icons/hi';
-import explode from '../utilities/explode';
-import toast, { Toaster } from 'react-hot-toast';
+import Typed from "typed.js";
+import { RiHeartPulseFill } from "react-icons/ri";
+import { TfiWrite } from "react-icons/tfi";
+import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { HiMail } from "react-icons/hi";
+import explode from "../utilities/explode";
+import toast, { Toaster } from "react-hot-toast";
 
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const HomePage = () => {
-  const [nameInput, setNameInput] = useState('');
-  const [emailInput, setEmailInput] = useState('');
-  const [messageInput, setMessageInput] = useState('');
+  const [nameInput, setNameInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [messageInput, setMessageInput] = useState("");
   // const [successMessage, setSuccessMessage] = useState('');
 
   const notify = (toastInput: any) =>
-    toast.error(toastInput, { duration: 3000, position: 'bottom-center' });
+    toast.error(toastInput, { duration: 3000, position: "bottom-center" });
 
   const notifySuccess = (toastInput: any) =>
-    toast.success(toastInput, { duration: 3000, position: 'bottom-center' });
+    toast.success(toastInput, { duration: 3000, position: "bottom-center" });
 
   const el = useRef(null);
   const form: any = useRef();
@@ -32,12 +32,12 @@ const HomePage = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        'Creating Web Experiences',
-        'Building server-side apps',
-        'Designing and managing DB',
-        'Architecting AWS Serverless',
-        'Utilizing GIT',
-        'Planning, coordinating projects',
+        "Creating Web Experiences",
+        "Building server-side apps",
+        "Designing and managing DB",
+        "Architecting AWS Serverless",
+        "Utilizing GIT",
+        "Planning, coordinating projects",
       ], // Strings to display
       // Speed settings, try diffrent values until you get good results
       startDelay: 300,
@@ -49,12 +49,12 @@ const HomePage = () => {
     });
 
     document
-      ?.querySelector('.aboutme-section-photo')
-      ?.addEventListener('mouseover', (e: any) => explode(e.pageX, e.pageY));
+      ?.querySelector(".aboutme-section-photo")
+      ?.addEventListener("mouseover", (e: any) => explode(e.pageX, e.pageY));
 
     document
-      ?.querySelector('.aboutme-section-photo')
-      ?.addEventListener('ontouchstart', (e: any) => explode(e.pageX, e.pageY));
+      ?.querySelector(".aboutme-section-photo")
+      ?.addEventListener("ontouchstart", (e: any) => explode(e.pageX, e.pageY));
 
     // Destroying
     return () => {
@@ -65,8 +65,8 @@ const HomePage = () => {
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    if (nameInput === '') {
-      notify('Please enter a valid name');
+    if (nameInput === "") {
+      notify("Please enter a valid name");
       return;
     }
 
@@ -74,36 +74,36 @@ const HomePage = () => {
     const isValidEmail = pattern.test(emailInput);
 
     if (!isValidEmail) {
-      notify('Please enter a valid email id');
+      notify("Please enter a valid email id");
       return;
     }
 
-    if (messageInput === '') {
-      notify('Please enter a valid message');
+    if (messageInput === "") {
+      notify("Please enter a valid message");
       return;
     }
 
     emailjs
       .sendForm(
-        'service_qd3p5ys',
-        'template_5vymobo',
+        "service_qd3p5ys",
+        "template_5vymobo",
         form.current,
-        'LjLsiWNpLdOowCNc6'
+        "LjLsiWNpLdOowCNc6"
       )
       .then(
         (result) => {
           console.log(result.text);
-          notifySuccess('Message has been sent successfully');
-          setEmailInput('');
-          setMessageInput('');
-          setNameInput('');
+          notifySuccess("Message has been sent successfully");
+          setEmailInput("");
+          setMessageInput("");
+          setNameInput("");
         },
         (error) => {
           console.log(error.text);
-          notifySuccess('Message has been sent successfully');
-          setEmailInput('');
-          setMessageInput('');
-          setNameInput('');
+          notifySuccess("Message has been sent successfully");
+          setEmailInput("");
+          setMessageInput("");
+          setNameInput("");
         }
       );
   };
@@ -111,60 +111,60 @@ const HomePage = () => {
   return (
     <>
       <Toaster />
-      <main className='main'>
-        <div className='main-container'>
+      <main className="main">
+        <div className="main-container">
           {/* Hero Section */}
-          <section className='main-header-section fadeInUp'>
-            <div className='main-header-blobs'>
+          <section className="main-header-section fadeInUp">
+            <div className="main-header-blobs">
               <svg
-                className='cl-ak shape cl_af'
-                style={{ color: '#FBE5F1' }}
-                viewBox='0 0 312 303'
-                width='312'
-                height='303'
-                fill='none'
+                className="cl-ak shape cl_af"
+                style={{ color: "#FBE5F1" }}
+                viewBox="0 0 312 303"
+                width="312"
+                height="303"
+                fill="none"
               >
                 <path
-                  fillRule='evenodd'
-                  clipRule='evenodd'
-                  d='M139.7 8.8c37.8 2.8 76.4 1.8 106.6 24.9C280.7 59.9 307.9 97 311.4 140c3.9 46.3-12 94-45.8 125.8-33 31.2-80.6 39.6-126 36.5-42-3-83-20-109.5-52.9-24.1-30-18.6-70.8-20.9-109.4-2.5-42.7-23.1-92.8 7-123.2C46.5-13.5 97 5.7 139.8 9z'
-                  fill='currentColor'
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M139.7 8.8c37.8 2.8 76.4 1.8 106.6 24.9C280.7 59.9 307.9 97 311.4 140c3.9 46.3-12 94-45.8 125.8-33 31.2-80.6 39.6-126 36.5-42-3-83-20-109.5-52.9-24.1-30-18.6-70.8-20.9-109.4-2.5-42.7-23.1-92.8 7-123.2C46.5-13.5 97 5.7 139.8 9z"
+                  fill="currentColor"
                 ></path>
               </svg>
 
               <svg
-                className='cl-al shape cl_af'
-                style={{ color: '#ddebf8' }}
-                viewBox='0 0 388 307'
-                width='388'
-                height='307'
-                fill='none'
+                className="cl-al shape cl_af"
+                style={{ color: "#ddebf8" }}
+                viewBox="0 0 388 307"
+                width="388"
+                height="307"
+                fill="none"
               >
                 <path
-                  fillRule='evenodd'
-                  clipRule='evenodd'
-                  d='M187.4 6.4c54.2-4 114.7-19.1 154 18.6C384.8 66.7 397.5 134.2 381 192c-15.6 55-64 95.4-118.7 111.6-46.2 13.6-88-18.1-131.9-37.5-47.3-21-110.4-27.1-126.2-76.5C-12.2 138.3 21.9 84.4 60 46.2 93.1 13 140.7 9.9 187.4 6.4z'
-                  fill='currentColor'
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M187.4 6.4c54.2-4 114.7-19.1 154 18.6C384.8 66.7 397.5 134.2 381 192c-15.6 55-64 95.4-118.7 111.6-46.2 13.6-88-18.1-131.9-37.5-47.3-21-110.4-27.1-126.2-76.5C-12.2 138.3 21.9 84.4 60 46.2 93.1 13 140.7 9.9 187.4 6.4z"
+                  fill="currentColor"
                 ></path>
               </svg>
             </div>
 
-            <div className='main-header-section--left'>
-              <img src='./programmer_working.svg' alt='Programmer Working' />
+            <div className="main-header-section--left">
+              <img src="./programmer_working.svg" alt="Programmer Working" />
             </div>
-            <div className='main-header-section--right'>
-              <p className='greeting'>Hello! My Name is</p>
-              <h1 className='main-header-myname'>Ajay Manikanta</h1>
-              <p className='titles-header'>
+            <div className="main-header-section--right">
+              <p className="greeting">Hello! My Name is</p>
+              <h1 className="main-header-myname">Praharshitha</h1>
+              <p className="titles-header">
                 I <RiHeartPulseFill />
               </p>
-              <div className='titles'>
+              <div className="titles">
                 <span ref={el}></span> &nbsp;
               </div>
               <a
-                className='main-header-contactme'
-                target='_blank'
-                href='./Resume.pdf'
+                className="main-header-contactme"
+                target="_blank"
+                href="./Resume.pdf"
               >
                 RESUME&nbsp; <TfiWrite />
               </a>
@@ -172,72 +172,74 @@ const HomePage = () => {
           </section>
 
           {/* About me section */}
-          <div className='swipe-through-here' id='aboutme'></div>
+          <div className="swipe-through-here" id="aboutme"></div>
           <br />
           <br />
           <br />
           <br />
-          <section className='aboutme'>
-            <div className='aboutme-container'>
-              <div className='aboutme-content-container'>
-                <div className='aboutme-section--content'>
-                  <div className='aboutme-section--left'>
-                    <div className='aboutme-heading--container'>
-                      <h2 className='aboutme-heading'>About Me</h2>
+          <section className="aboutme">
+            <div className="aboutme-container">
+              <div className="aboutme-content-container">
+                <div className="aboutme-section--content">
+                  <div className="aboutme-section--left">
+                    <div className="aboutme-heading--container">
+                      <h2 className="aboutme-heading">About Me</h2>
                       <span></span>
                     </div>
                     <p>
-                      Hola! My name is{' '}
+                      Hola! My name is{" "}
                       <span
-                        className='highlight'
+                        className="highlight"
                         style={{
                           cursor: "url('../assets/Ajay_image.ico'), auto",
                         }}
                       >
-                        Ajay
-                      </span>{' '}
-                      and I am based out of{' '}
-                      <span className='highlight'>BANGALORE</span>. I have a
-                      strong affinity for crafting web experiences. My
-                      fascination with web development ignited in 2017 when I
-                      ventured into the realm of customizing website in{' '}
-                      <span className='highlight'>Chubb</span>. Little did I
-                      know that my endeavor to create a personalized portfolio
-                      would lead me to acquire extensive knowledge in{' '}
-                      <span className='highlight'>HTML, CSS & JAVASCRIPT!</span>
+                        Praharshitha
+                      </span>{" "}
+                      and I'm currently based in{" "}
+                      <span className="highlight">BANGALORE</span>, with a deep
+                      passion for data and analytics. My journey into the world
+                      of data began in 2022 while working at{" "}
+                      <span className="highlight">Travellers</span>, where I
+                      first explored customizing internal dashboards. What
+                      started as a simple initiative soon evolved into a
+                      full-fledged interest, leading me to build strong
+                      expertise in{" "}
+                      <span className="highlight">SQL, Power BI</span>, and
+                      data-driven storytelling.
                     </p>
                     <p>
-                      Looking ahead to the present, I've been fortunate to
-                      accumulate valuable experience across diverse
-                      environments, including working at{' '}
-                      <span className='highlight'>Microsoft</span>. Currently,
-                      my primary dedication lies in the development of
-                      accessible and inclusive products, as well as digital
-                      experiences, at <span className='highlight'>Bosch</span>.
-                      I collaborate with a wide array of clients to bring their
-                      visions to life.
+                      Fast-forward to today, I've had the opportunity to gain
+                      meaningful experience across diverse settings, including
+                      my time at
+                      <span className="highlight">Accenture</span>. At present,
+                      I'm focused on leveraging data to drive impactful
+                      decisions and build insightful analytics solutions at{" "}
+                      <span className="highlight">GND Solutions</span>. I work
+                      closely with a variety of stakeholders to transform
+                      complex data into clear, actionable insights. ̰
                     </p>
                     <p>
-                      These are some of the technologies I've been actively
-                      engaged with in recent times :
+                      Here are some of the key tools and technologies I've been
+                      actively working with in recent times:
                     </p>
-                    <ul className='aboutme-technologylist'>
-                      <li>HTML & CSS</li>
-                      <li>Javascript</li>
-                      <li>Typescript</li>
-                      <li>React</li>
-                      <li>Node.js</li>
-                      <li>AWS</li>
-                      <li>Jenkins</li>
-                      <li>D365 Commerce</li>
+                    <ul className="aboutme-technologylist">
+                      <li>SQL</li>
+                      <li>Power BI</li>
+                      <li>Python</li>
+                      <li>Pandas & NumPy</li>
+                      <li>Excel (Advanced)</li>
+                      <li>Tableau</li>
+                      <li>Azure Data Services</li>
+                      <li>Jupyter Notebooks</li>
                     </ul>
                   </div>
-                  <div className='aboutme-section--right'>
-                    <div className='aboutme-section-photo-container'>
+                  <div className="aboutme-section--right">
+                    <div className="aboutme-section-photo-container">
                       <img
-                        className='aboutme-section-photo'
-                        src='./Ajay_inSuit.png'
-                        alt=''
+                        className="aboutme-section-photo"
+                        src="./Ajay_inSuit.png"
+                        alt=""
                       />
                     </div>
                   </div>
@@ -247,28 +249,28 @@ const HomePage = () => {
           </section>
 
           {/* myWork */}
-          <div className='swipe-through-here' id='mywork'></div>
+          <div className="swipe-through-here" id="mywork"></div>
           <br />
           <br />
           <br />
           <br />
-          <section className='mywork'>
-            <div className='mywork-container'>
-              <div className='mywork-header-container'>
-                <h2 className='mywork-heading'>My Journey</h2>
+          <section className="mywork">
+            <div className="mywork-container">
+              <div className="mywork-header-container">
+                <h2 className="mywork-heading">My Journey</h2>
                 <span></span>
               </div>
-              <div className='mywork-content-container'>
-                <div className='mywork-content-cognizant mywork-content-company'>
-                  <div className='mywork-content-cognizant--left'>
-                    <img src='./Cognizant_Logo.png' alt='Cognizant' />
+              <div className="mywork-content-container">
+                <div className="mywork-content-cognizant mywork-content-company">
+                  <div className="mywork-content-cognizant--left">
+                    <img src="./Cognizant_Logo.png" alt="Cognizant" />
                   </div>
-                  <div className='mywork-content-cognizant--right'>
+                  <div className="mywork-content-cognizant--right">
                     <h3
                       style={{
-                        color: '#343434',
-                        fontSize: '18px',
-                        fontWeight: '600',
+                        color: "#343434",
+                        fontSize: "18px",
+                        fontWeight: "600",
                       }}
                     >
                       Cognizant (2017 - 2020)
@@ -282,16 +284,16 @@ const HomePage = () => {
                     </p>
                   </div>
                 </div>
-                <div className='mywork-content-infosys mywork-content-company'>
-                  <div className='mywork-content-infosys--left'>
-                    <img src='./Infosys_Logo.png' alt='Infosys' />
+                <div className="mywork-content-infosys mywork-content-company">
+                  <div className="mywork-content-infosys--left">
+                    <img src="./Infosys_Logo.png" alt="Infosys" />
                   </div>
-                  <div className='mywork-content-infosys--right'>
+                  <div className="mywork-content-infosys--right">
                     <h3
                       style={{
-                        color: '#343434',
-                        fontSize: '18px',
-                        fontWeight: '600',
+                        color: "#343434",
+                        fontSize: "18px",
+                        fontWeight: "600",
                       }}
                     >
                       Infosys (2020 - 2021)
@@ -305,16 +307,16 @@ const HomePage = () => {
                     </p>
                   </div>
                 </div>
-                <div className='mywork-content-techm mywork-content-company'>
-                  <div className='mywork-content-techm--left'>
-                    <img src='./Tech_Mahindra_Logo.png' alt='TechM' />
+                <div className="mywork-content-techm mywork-content-company">
+                  <div className="mywork-content-techm--left">
+                    <img src="./Tech_Mahindra_Logo.png" alt="TechM" />
                   </div>
-                  <div className='mywork-content-techm--right'>
+                  <div className="mywork-content-techm--right">
                     <h3
                       style={{
-                        color: '#343434',
-                        fontSize: '18px',
-                        fontWeight: '600',
+                        color: "#343434",
+                        fontSize: "18px",
+                        fontWeight: "600",
                       }}
                     >
                       Tech Mahindra (2021 - 2023)
@@ -330,16 +332,16 @@ const HomePage = () => {
                     </p>
                   </div>
                 </div>
-                <div className='mywork-content-bosch mywork-content-company'>
-                  <div className='mywork-content-bosch--left'>
-                    <img src='./Bosch_Logo.jpg' alt='Bosch' />
+                <div className="mywork-content-bosch mywork-content-company">
+                  <div className="mywork-content-bosch--left">
+                    <img src="./Bosch_Logo.jpg" alt="Bosch" />
                   </div>
-                  <div className='mywork-content-bosch--right'>
+                  <div className="mywork-content-bosch--right">
                     <h3
                       style={{
-                        color: '#343434',
-                        fontSize: '18px',
-                        fontWeight: '600',
+                        color: "#343434",
+                        fontSize: "18px",
+                        fontWeight: "600",
                       }}
                     >
                       Bosch (2023 - Present)
@@ -363,97 +365,89 @@ const HomePage = () => {
           </section>
 
           {/* Contact Me */}
-          <div className='swipe-through-here' id='contactme'></div>
+          <div className="swipe-through-here" id="contactme"></div>
           <br />
           <br />
           <br />
           <br />
-          <section className='contactme'>
-            <div className='contactme-container'>
-              <div className='contactme-heading-container'>
-                <h2 className='contactme-heading'>Contact Me</h2>
+          <section className="contactme">
+            <div className="contactme-container">
+              <div className="contactme-heading-container">
+                <h2 className="contactme-heading">Contact Me</h2>
                 <span></span>
               </div>
-              <div className='contactme-content-container'>
-                <div className='contactme-content--left'>
+              <div className="contactme-content-container">
+                <div className="contactme-content--left">
                   {/* <h3>Send me a message</h3> */}
-                  <p style={{ marginBottom: '1rem' }}>
+                  <p style={{ marginBottom: "1rem" }}>
                     Please feel free to contact me for any queries
                   </p>
                   <form
                     ref={form}
-                    className='contactme-form'
+                    className="contactme-form"
                     onSubmit={sendEmail}
                   >
-                    <div className='contactme-form-inputs'>
+                    <div className="contactme-form-inputs">
                       <input
                         value={nameInput}
                         onChange={(e) => setNameInput(e.target.value)}
-                        type='text'
-                        name='from_name'
-                        placeholder='Enter Your Name'
+                        type="text"
+                        name="from_name"
+                        placeholder="Enter Your Name"
                       />
                       <input
                         value={emailInput}
                         onChange={(e) => setEmailInput(e.target.value)}
-                        type='text'
-                        name='from_email'
-                        placeholder='Enter Your Email'
+                        type="text"
+                        name="from_email"
+                        placeholder="Enter Your Email"
                       />
                       <textarea
                         value={messageInput}
                         onChange={(e) => setMessageInput(e.target.value)}
-                        name='message'
-                        id=''
-                        placeholder='Enter Your Message'
+                        name="message"
+                        id=""
+                        placeholder="Enter Your Message"
                       ></textarea>
                     </div>
-                    <div className='contactme-form-btn-container'>
-                      <button type='submit' value='submit'>
+                    <div className="contactme-form-btn-container">
+                      <button type="submit" value="submit">
                         SEND NOW
                       </button>
                       <a
-                        href={`mailto:ajay.vijay1123@gmail.com?subject=Reaching%20out%20to%20you%20&body=${messageInput
-                          .split(' ')
-                          .join('%20')}`}
-                        rel='noopener noreferrer'
-                        target='_blank'
+                        href={`mailto:praharshitha.bv@gmail.com?subject=Reaching%20out%20to%20you%20&body=${messageInput
+                          .split(" ")
+                          .join("%20")}`}
+                        rel="noopener noreferrer"
+                        target="_blank"
                       >
                         SEND EMAIL
                       </a>
                     </div>
                   </form>
                 </div>
-                <div className='contactme-content--right'>
-                  <div className='contactme-details-container'>
-                    <div className='contactme-details--address contactme-details--icons'>
+                <div className="contactme-content--right">
+                  <div className="contactme-details-container">
+                    <div className="contactme-details--address contactme-details--icons">
                       <FaMapMarkerAlt size={20} />
                       <h3>Address</h3>
                       <p>Yelachenahalli, Bangalore</p>
                     </div>
-                    <div className='contactme-details--phone contactme-details--icons'>
+                    <div className="contactme-details--phone contactme-details--icons">
                       <FaPhoneAlt size={20} />
                       <h3>Phone</h3>
                       <p>+91 7981263843</p>
                     </div>
-                    <div className='contactme-details--email contactme-details--icons'>
+                    <div className="contactme-details--email contactme-details--icons">
                       <HiMail size={25} />
                       <h3>Email</h3>
-                      <p>ajay.vijay1123@gmail.com</p>
+                      <p>praharshitha.bv@gmail.com</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          {/* <a
-              className='contactme-mail-btn'
-              href='mailto:ajay.vijay1123@gmail.com?subject=Reaching%20out%20to%20you%20&body=Hi%20Ajay,%20Can%20we%20connect%20'
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              Contact Me
-            </a> */}
         </div>
       </main>
     </>

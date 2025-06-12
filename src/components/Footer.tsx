@@ -9,6 +9,11 @@ const Footer = () => {
   let minutes: any;
   let seconds: any;
 
+  const date = new Date();
+  const year = date.getFullYear();
+
+
+
   useEffect(() => {
     /*  clock */
     hours = document.querySelector('.hours');
@@ -58,13 +63,13 @@ const Footer = () => {
         <div className='footer-socialmedia--icons'>
           <ul>
             <li>
-              <a href='https://github.com/AjayManikantaG' target='_blank'>
+              <a href='https://github.com/Praharshithabv' target='_blank'>
                 <FaGithub size={22} />
               </a>
             </li>
             <li>
               <a
-                href='https://www.linkedin.com/in/ajay-manikanta-17b731110/'
+                href='https://www.linkedin.com/in/praharshitha-bv/'
                 target='_blank'
               >
                 <FaLinkedinIn size={22} />
@@ -86,7 +91,7 @@ const Footer = () => {
           </ul>
         </div>
         <p style={{ textAlign: 'center' }}>
-          Copyright © 2025. Designed and Built by Ajay
+          Copyright © {year}. Curated by Praharshitha
         </p>
       </div>
     </footer>

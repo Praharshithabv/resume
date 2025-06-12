@@ -17,10 +17,9 @@ const Header = () => {
       <div className='header-container'>
         <div className='header-container--left'>
           <a onClick={scrollToTop}>
-            <img tabIndex={0} src='./AJ-logo__Lines.svg' alt='AJ Logo' />
-            <img tabIndex={0} src='./Coding_guy.gif' alt='AJ Logo' />
+            <img tabIndex={0} src='./AJ-logo__Lines.svg' alt='PH Logo' />
+            <img tabIndex={0} src='./Coding_guy.gif' alt='PH Logo' />
           </a>
-          {/* <p>AJAY MANIKANTA</p> */}
         </div>
         <div className='header-container--right'>
           <nav className='header-navigation'>
