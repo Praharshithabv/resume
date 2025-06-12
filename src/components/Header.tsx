@@ -34,7 +34,7 @@ const Header = () => {
                 <a href='#aboutme'>Let's Play</a>
               </li> */}
               <li tabIndex={0} style={{ marginRight: 0 }}>
-                <a href='#contactme'>Contact</a>
+                <a href='#projects'>Projects</a>
               </li>
             </ul>
           </nav>
@@ -84,7 +84,7 @@ const Header = () => {
                     tabIndex={0}
                     onClick={() => setIsHamburgerActive(!isHamburgerActive)}
                   >
-                    <a href='#contactme'>Project</a>
+                    <a href='#projects'>Projects</a>
                   </li>
                 </ul>
                 {/* <div>

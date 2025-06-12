@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
-import { FaGithub, FaLinkedinIn, FaCodepen } from 'react-icons/fa';
-import { SiCodesandbox } from 'react-icons/si';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+// import { SiCodesandbox } from 'react-icons/si';
 
 const Footer = () => {
   let hours: any;

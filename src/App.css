@@ -323,7 +323,7 @@
 }
 
 .main .main-container .main-header-section .main-header-section--left img {
-  width: 30rem;
+  width: 16rem;
 }
 
 .main .main-container .main-header-section .main-header-section--right {
@@ -349,7 +349,7 @@
   .main-header-section
   .main-header-section--right
   .main-header-myname {
-  cursor: url('./assets/Ajay_image.ico'), auto;
+  cursor: url('./assets/charts_icon.ico'), auto;
   font-size: 62px;
 }
 

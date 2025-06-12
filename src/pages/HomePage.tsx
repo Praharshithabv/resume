@@ -1,33 +1,31 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Typed from "typed.js";
 import { RiHeartPulseFill } from "react-icons/ri";
 import { TfiWrite } from "react-icons/tfi";
-import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { HiMail } from "react-icons/hi";
 import explode from "../utilities/explode";
-import toast, { Toaster } from "react-hot-toast";
+// import toast, { Toaster } from "react-hot-toast";
 
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 
 const HomePage = () => {
-  const [nameInput, setNameInput] = useState("");
-  const [emailInput, setEmailInput] = useState("");
-  const [messageInput, setMessageInput] = useState("");
-  // const [successMessage, setSuccessMessage] = useState('');
+  // const [nameInput, setNameInput] = useState("");
+  // const [emailInput, setEmailInput] = useState("");
+  // const [messageInput, setMessageInput] = useState("");
+  // // const [successMessage, setSuccessMessage] = useState('');
 
-  const notify = (toastInput: any) =>
-    toast.error(toastInput, { duration: 3000, position: "bottom-center" });
+  // const notify = (toastInput: any) =>
+  //   toast.error(toastInput, { duration: 3000, position: "bottom-center" });
 
-  const notifySuccess = (toastInput: any) =>
-    toast.success(toastInput, { duration: 3000, position: "bottom-center" });
+  // const notifySuccess = (toastInput: any) =>
+  //   toast.success(toastInput, { duration: 3000, position: "bottom-center" });
 
   const el = useRef(null);
-  const form: any = useRef();
+  // const form: any = useRef();
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -62,55 +60,55 @@ const HomePage = () => {
     };
   }, []);
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
+  // const sendEmail = (e: any) => {
+  //   e.preventDefault();
 
-    if (nameInput === "") {
-      notify("Please enter a valid name");
-      return;
-    }
+  //   if (nameInput === "") {
+  //     notify("Please enter a valid name");
+  //     return;
+  //   }
 
-    const pattern = /^\S+@\S+\.\S+$/;
-    const isValidEmail = pattern.test(emailInput);
+  //   const pattern = /^\S+@\S+\.\S+$/;
+  //   const isValidEmail = pattern.test(emailInput);
 
-    if (!isValidEmail) {
-      notify("Please enter a valid email id");
-      return;
-    }
+  //   if (!isValidEmail) {
+  //     notify("Please enter a valid email id");
+  //     return;
+  //   }
 
-    if (messageInput === "") {
-      notify("Please enter a valid message");
-      return;
-    }
+  //   if (messageInput === "") {
+  //     notify("Please enter a valid message");
+  //     return;
+  //   }
 
-    emailjs
-      .sendForm(
-        "service_qd3p5ys",
-        "template_5vymobo",
-        form.current,
-        "LjLsiWNpLdOowCNc6"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          notifySuccess("Message has been sent successfully");
-          setEmailInput("");
-          setMessageInput("");
-          setNameInput("");
-        },
-        (error) => {
-          console.log(error.text);
-          notifySuccess("Message has been sent successfully");
-          setEmailInput("");
-          setMessageInput("");
-          setNameInput("");
-        }
-      );
-  };
+  //   emailjs
+  //     .sendForm(
+  //       "service_qd3p5ys",
+  //       "template_5vymobo",
+  //       form.current,
+  //       "LjLsiWNpLdOowCNc6"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         notifySuccess("Message has been sent successfully");
+  //         setEmailInput("");
+  //         setMessageInput("");
+  //         setNameInput("");
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //         notifySuccess("Message has been sent successfully");
+  //         setEmailInput("");
+  //         setMessageInput("");
+  //         setNameInput("");
+  //       }
+  //     );
+  // };
 
   return (
     <>
-      <Toaster />
+      {/* <Toaster /> */}
       <main className="main">
         <div className="main-container">
           {/* Hero Section */}
@@ -295,7 +293,7 @@ const HomePage = () => {
                         fontWeight: "600",
                       }}
                     >
-                      GND (2024 - Present)
+                      GND Solutions (2024 - Present)
                     </h3>
                     <p>
                       Engaged in collaborative interactions with skilled
@@ -365,6 +363,14 @@ const HomePage = () => {
               </div>
             </div>
           </section>
+
+          {/* Projects */}
+          <div className="swipe-through-here" id="projects"></div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <section className="projects"></section>
 
           {/* Contact Me */}
           {/* <div className="swipe-through-here" id="contactme"></div>
