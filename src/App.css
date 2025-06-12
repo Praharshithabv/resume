@@ -305,21 +305,21 @@
 
 .main .main-container .main-header-section .main-header-blobs svg:first-child {
   position: absolute;
-  width: 350px;
+  width: 450px;
   right: 45%;
   opacity: 0.5;
   transform: rotate(-70deg);
   z-index: 1;
-  animation: rotateAndScaleBlobs 20s infinite;
+  animation: rotateAndScaleBlobs 10s infinite;
 }
 .main .main-container .main-header-section .main-header-blobs svg:last-child {
   position: absolute;
-  width: 350px;
+  width: 450px;
   left: 35%;
   opacity: 0.5;
   transform: rotate(70deg);
   z-index: 1;
-  animation: rotateAndScaleBlobs 18s infinite;
+  animation: rotateAndScaleBlobs 10s infinite;
 }
 
 .main .main-container .main-header-section .main-header-section--left img {
@@ -726,7 +726,7 @@
   margin-top: 2rem;
 }
 
-.mywork .mywork-content-container .mywork-content-cognizant {
+.mywork .mywork-content-container .mywork-content-accenture {
   display: flex;
 }
 
@@ -742,10 +742,10 @@
   margin-right: 2rem;
 }
 
-.mywork .mywork-content-infosys {
+.mywork .mywork-content-gnd {
   flex-direction: row-reverse;
 }
-.mywork .mywork-content-infosys img {
+.mywork .mywork-content-gnd img {
   margin-right: 0;
   margin-left: 2rem;
 }

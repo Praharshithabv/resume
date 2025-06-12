@@ -75,7 +75,7 @@ const Footer = () => {
                 <FaLinkedinIn size={22} />
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href='https://codepen.io/ajay_krishna' target='_blank'>
                 <FaCodepen size={22} />
               </a>
@@ -87,7 +87,7 @@ const Footer = () => {
               >
                 <SiCodesandbox size={22} />
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <p style={{ textAlign: 'center' }}>

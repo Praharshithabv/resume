@@ -17,7 +17,7 @@ const Header = () => {
       <div className='header-container'>
         <div className='header-container--left'>
           <a onClick={scrollToTop}>
-            <img tabIndex={0} src='./AJ-logo__Lines.svg' alt='PH Logo' />
+            <img tabIndex={0} src='./PH.png' alt='PH Logo' />
             <img tabIndex={0} src='./Coding_guy.gif' alt='PH Logo' />
           </a>
         </div>
@@ -84,7 +84,7 @@ const Header = () => {
                     tabIndex={0}
                     onClick={() => setIsHamburgerActive(!isHamburgerActive)}
                   >
-                    <a href='#contactme'>Contact</a>
+                    <a href='#contactme'>Project</a>
                   </li>
                 </ul>
                 {/* <div>

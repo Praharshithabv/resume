@@ -32,12 +32,12 @@ const HomePage = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Creating Web Experiences",
-        "Building server-side apps",
-        "Designing and managing DB",
-        "Architecting AWS Serverless",
-        "Utilizing GIT",
-        "Planning, coordinating projects",
+        "Analyzing data with Power BI",
+        "Querying databases with SQL",
+        "Creating data visualizations",
+        "Managing and modeling data",
+        "Utilizing data analytics tools",
+        "Coordinating data-driven projects",
       ], // Strings to display
       // Speed settings, try diffrent values until you get good results
       startDelay: 300,
@@ -211,10 +211,10 @@ const HomePage = () => {
                     <p>
                       Fast-forward to today, I've had the opportunity to gain
                       meaningful experience across diverse settings, including
-                      my time at
-                      <span className="highlight">Accenture</span>. At present,
-                      I'm focused on leveraging data to drive impactful
-                      decisions and build insightful analytics solutions at{" "}
+                      my time at <span className="highlight">Accenture</span>.
+                      At present, I'm focused on leveraging data to drive
+                      impactful decisions and build insightful analytics
+                      solutions at{" "}
                       <span className="highlight">GND Solutions</span>. I work
                       closely with a variety of stakeholders to transform
                       complex data into clear, actionable insights. ̰
@@ -226,19 +226,17 @@ const HomePage = () => {
                     <ul className="aboutme-technologylist">
                       <li>SQL</li>
                       <li>Power BI</li>
-                      <li>Python</li>
-                      <li>Pandas & NumPy</li>
-                      <li>Excel (Advanced)</li>
-                      <li>Tableau</li>
-                      <li>Azure Data Services</li>
-                      <li>Jupyter Notebooks</li>
+                      <li>Excel</li>
+                      <li>Data Modeling</li>
+                      <li>ETL</li>
+                      <li>DAX</li>
                     </ul>
                   </div>
                   <div className="aboutme-section--right">
                     <div className="aboutme-section-photo-container">
                       <img
                         className="aboutme-section-photo"
-                        src="./Ajay_inSuit.png"
+                        src="./Harshi.jpeg"
                         alt=""
                       />
                     </div>
@@ -261,11 +259,11 @@ const HomePage = () => {
                 <span></span>
               </div>
               <div className="mywork-content-container">
-                <div className="mywork-content-cognizant mywork-content-company">
-                  <div className="mywork-content-cognizant--left">
-                    <img src="./Cognizant_Logo.png" alt="Cognizant" />
+                <div className="mywork-content-accenture mywork-content-company">
+                  <div className="mywork-content-accenture--left">
+                    <img src="./accenture_logo.png" alt="Accenture" />
                   </div>
-                  <div className="mywork-content-cognizant--right">
+                  <div className="mywork-content-accenture--right">
                     <h3
                       style={{
                         color: "#343434",
@@ -273,22 +271,23 @@ const HomePage = () => {
                         fontWeight: "600",
                       }}
                     >
-                      Cognizant (2017 - 2020)
+                      Accenture (2022 - 2024)
                     </h3>
                     <p>
-                      Developed and maintained code for in-house and client
-                      websites primarily using technologies like DB2, HTML, CSS,
-                      Javascript, React, NodeJS. Worked across various projects
-                      and learnt the development patterns. Deliver precise
-                      documentation for the development process.
+                      Developed and maintained data models and dashboards for
+                      in-house and client projects at Accenture, primarily using
+                      Power BI, DAX, and SQL for data modeling. Collaborated on
+                      diverse projects, mastering data analytics and
+                      visualization patterns. Delivered precise documentation
+                      for the data development and reporting process.
                     </p>
                   </div>
                 </div>
-                <div className="mywork-content-infosys mywork-content-company">
-                  <div className="mywork-content-infosys--left">
-                    <img src="./Infosys_Logo.png" alt="Infosys" />
+                <div className="mywork-content-gnd mywork-content-company">
+                  <div className="mywork-content-gnd--left">
+                    <img src="./GND_Solutions.png" alt="GND" />
                   </div>
-                  <div className="mywork-content-infosys--right">
+                  <div className="mywork-content-gnd--right">
                     <h3
                       style={{
                         color: "#343434",
@@ -296,18 +295,22 @@ const HomePage = () => {
                         fontWeight: "600",
                       }}
                     >
-                      Infosys (2020 - 2021)
+                      GND (2024 - Present)
                     </h3>
                     <p>
-                      Work on AWS cloud to deliver performant microservices
-                      using AWS Lambda, DynamoDB, Cloud Formation, Serverless,
-                      NodeJS. Write UI using ReactJS, JSX, CSS. Deploy the
-                      builds using JFrog and Jenkins. Worked on designing entire
-                      architecture of the serverless app.
+                      Engaged in collaborative interactions with skilled
+                      professionals at GND, contributing to innovative data
+                      solutions using Power BI, DAX, and data modeling.
+                      Specialized in leveraging Power BI to create visually
+                      appealing and customized dashboards. Proficiently tasked
+                      with developing advanced visualizations and calculations
+                      using DAX, Power BI, and SQL. Responsible for the seamless
+                      deployment of data models and reports through efficient
+                      project workflows.
                     </p>
                   </div>
                 </div>
-                <div className="mywork-content-techm mywork-content-company">
+                {/* <div className="mywork-content-techm mywork-content-company">
                   <div className="mywork-content-techm--left">
                     <img src="./Tech_Mahindra_Logo.png" alt="TechM" />
                   </div>
@@ -347,30 +350,29 @@ const HomePage = () => {
                       Bosch (2023 - Present)
                     </h3>
                     <p>
-                      Engaged in collaborative interactions with highly skilled
-                      professionals, contributing to the development of
-                      innovative solutions within the realm of D365 ECommerce
-                      storefronts. Specializing in leveraging React and
-                      sitebuilder technologies to craft aesthetically pleasing
-                      and customized websites. Proficiently tasked with the
-                      creation of sophisticated UI components using ReactJS,
-                      JSX, and CSS. Responsible for the seamless deployment of
-                      builds through the utilization of Lifecycle Services
-                      (LCS).
+                      Engaged in collaborative interactions with skilled
+                      professionals at GND, contributing to innovative data
+                      solutions using Power BI, DAX, and data modeling.
+                      Specialized in leveraging Power BI to create visually
+                      appealing and customized dashboards. Proficiently tasked
+                      with developing advanced visualizations and calculations
+                      using DAX, Power BI, and SQL. Responsible for the seamless
+                      deployment of data models and reports through efficient
+                      project workflows.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </section>
 
           {/* Contact Me */}
-          <div className="swipe-through-here" id="contactme"></div>
+          {/* <div className="swipe-through-here" id="contactme"></div>
           <br />
           <br />
           <br />
-          <br />
-          <section className="contactme">
+          <br /> */}
+          {/* <section className="contactme">
             <div className="contactme-container">
               <div className="contactme-heading-container">
                 <h2 className="contactme-heading">Contact Me</h2>
@@ -378,7 +380,7 @@ const HomePage = () => {
               </div>
               <div className="contactme-content-container">
                 <div className="contactme-content--left">
-                  {/* <h3>Send me a message</h3> */}
+                  {/* <h3>Send me a message</h3> 
                   <p style={{ marginBottom: "1rem" }}>
                     Please feel free to contact me for any queries
                   </p>
@@ -447,7 +449,7 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
       </main>
     </>
