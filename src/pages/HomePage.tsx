@@ -370,7 +370,101 @@ const HomePage = () => {
           <br />
           <br />
           <br />
-          <section className="projects"></section>
+          <section className="projects">
+            <div className="projects-container">
+              <div className="projects-header-container">
+                <h2 className="projects-heading">My Projects</h2>
+                <span></span>
+              </div>
+              <div className="projects-grid">
+                <div
+                  className="project-card"
+                  onClick={() => window.open("./pdf/project1.pdf", "_blank")}
+                >
+                  <div className="project-image">
+                    <img src="./Sales_Performance.png" alt="Sales Dashboard" />
+                    <div className="project-overlay">
+                      <span>View Project</span>
+                    </div>
+                  </div>
+                  <div className="project-info">
+                    <h3>Sales Analytics Dashboard</h3>
+                    <p>
+                    Power BI dashboard for analyzing sales performance, revenue trends, and customer insights.
+                    </p>
+                    <div className="project-tags">
+                      <span>Power BI</span>
+                      <span>DAX</span>
+                      <span>SQL</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="project-card"
+                  onClick={() => window.open("./pdf/project2.pdf", "_blank")}
+                >
+                  <div className="project-image">
+                    <img src="./Adventure_work.png" alt="Adventure Work" />
+                    <div className="project-overlay">
+                      <span>View Project</span>
+                    </div>
+                  </div>
+                  <div className="project-info">
+                    <h3>Brand Market System</h3>
+                    <p>Power BI dashboard for company market trends and profit analysis for brands.</p>
+                    <div className="project-tags">
+                      <span>ETL</span>
+                      <span>Power BI</span>
+                      <span>Excel</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="project-card"
+                  onClick={() => window.open("./pdf/project3.pdf", "_blank")}
+                >
+                  <div className="project-image">
+                    <img src="./HR_Analytics.png" alt="HR Financial Analytics" />
+                    <div className="project-overlay">
+                      <span>View Project</span>
+                    </div>
+                  </div>
+                  <div className="project-info">
+                    <h3>HR Analytics Dashboard</h3>
+                    <p>Power BI dashboard for HR metrics and workforce insights.</p>
+                    <div className="project-tags">
+                      <span>Data Modeling</span>
+                      <span>Power BI</span>
+                      <span>DAX</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="project-card"
+                  onClick={() => window.open("./pdf/project4.pdf", "_blank")}
+                >
+                  <div className="project-image">
+                    <img src="./Road_accident_survey.png" alt="Road Accident Survey" />
+                    <div className="project-overlay">
+                      <span>View Project</span>
+                    </div>
+                  </div>
+                  <div className="project-info">
+                    <h3>Road Accident Analysis</h3>
+                    <p>dashboard for analyzing road conditions, traffic patterns, and maintenance insights.</p>
+                    <div className="project-tags">
+                      <span>SQL</span>
+                      <span>Power BI</span>
+                      <span>Analytics</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Contact Me */}
           {/* <div className="swipe-through-here" id="contactme"></div>
