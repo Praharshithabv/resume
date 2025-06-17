@@ -368,8 +368,6 @@ const HomePage = () => {
           <div className="swipe-through-here" id="projects"></div>
           <br />
           <br />
-          <br />
-          <br />
           <section className="projects">
             <div className="projects-container">
               <div className="projects-header-container">
